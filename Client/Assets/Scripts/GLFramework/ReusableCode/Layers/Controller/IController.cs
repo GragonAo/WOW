@@ -6,7 +6,7 @@
 namespace GLFramework
 {
 
-    public interface IController:INeedInit,ICanGetSystem,ICanRegisterAndUnRegisterEvent,ICanSendEvent,ICanSendCommand
+    public interface IController:ICanGetSystem,ICanRegisterAndUnRegisterEvent,ICanSendEvent,ICanSendCommand
     {
 
     }

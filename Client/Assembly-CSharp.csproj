@@ -68,9 +68,12 @@
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/IEventRegistraion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Layers/Controller/IController.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/IBelongToArchitecture.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/BasePanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/GameEventSystem.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/StartArchitecture.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/UnderLyingCode/Architecture/WowArchitecture.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/ChoicePanel.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/LoadingResSystem/GameResSystem.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/EventRegistraion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/EventExternsion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/CanSendCommandExternsion.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/CanGetLayersExternsion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/IOC/IOCContainer.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/GameStarter.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/IBasePanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/IUISystem.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/ICanGetUtility.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/ICanSendCommand.cs" />
@@ -96,6 +100,10 @@
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Singleton/Singleton.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/INeedInit.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Command/ICommand.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/LoginPanel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/Resources/UI/Login/AdditiveForRT.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

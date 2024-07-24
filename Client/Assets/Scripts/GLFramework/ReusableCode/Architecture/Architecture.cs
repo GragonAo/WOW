@@ -23,11 +23,6 @@ namespace GLFramework
             m_IOCContainer.Register<U>(instance);
         }
 
-        public void RegisterController<U>(U instance) where U : IController
-        {
-            m_IOCContainer.Register<U>(instance);
-        }
-
         public void RegisterEvent<U>(Action<object> onEvent) where U : new()
         {
             m_GameEventSystem.Register<U>(onEvent);
@@ -60,11 +55,6 @@ namespace GLFramework
         }
 
         protected abstract void Init();
-
-        U IArchitecture.GetController<U>()
-        {
-            return m_IOCContainer.Get<U>();
-        }
 
         U IArchitecture.GetModel<U>()
         {

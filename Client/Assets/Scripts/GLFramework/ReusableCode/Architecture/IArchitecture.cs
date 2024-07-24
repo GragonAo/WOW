@@ -18,11 +18,9 @@ namespace GLFramework
         public void RegisterSystem<U>(U instance) where U:ISystem;
         public void RegisetrModel<U>(U instance)where U:IModel;
         public void RegisterUtility<U>(U instance)where U:IUtility;
-        public void RegisterController<U>(U instance)where U:IController;
         public U GetSystem<U>()where U:class,ISystem;
         public U GetModel<U>()where U:class,IModel;
         public U GetUtility<U>()where U:class,IUtility;
-        public U GetController<U>()where U:class,IController;
     }
 }
 
