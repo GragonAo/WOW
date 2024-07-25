@@ -22,7 +22,7 @@ public class UISystem : IUISystem
         OpenPanel<LoginPanel>();
     }
 
-    public void OpenPanel<T>() where T : BasePanel
+    public void OpenPanel<T>(params object[] objs) where T : BasePanel
     {
         string panelName = typeof(T).Name;
         if (!m_PanelDict.TryGetValue(panelName, out IBasePanel panel))
@@ -63,20 +63,32 @@ public class UISystem : IUISystem
                 m_PanelStack.Peek().OnPause();
             m_PanelStack.Push(panel);
         }
-        panel.OnEnter();
+        panel.OnEnter(objs);
     }
 
 
-    public void ClosePanel<T>() where T : BasePanel
+    public void ClosePanel<T>(bool destroy = false) where T : BasePanel
     {
         Debug.Log("关闭UI :" + typeof(T).ToString());
-        if (m_PanelStack.Count > 0)
+        var panelName = typeof(T).ToString();
+        if (!m_PanelDict.ContainsKey(panelName)) return;
+        var panel = m_PanelDict[panelName];
+        if (((BasePanel)panel).LayerType == UILayerType.Interaction)
         {
-            m_PanelStack.Pop().OnExit();
             if (m_PanelStack.Count > 0)
             {
-                m_PanelStack.Peek().OnResume();
+                m_PanelStack.Pop();
+                if (m_PanelStack.Count > 0)
+                {
+                    m_PanelStack.Peek().OnResume();
+                }
             }
+        }
+        panel.OnExit();
+        if (destroy)
+        {
+            panel.OnDestroy();
+            m_PanelDict.Remove(panelName);
         }
     }
     private UIPanelInfo GetUIPanelInfo(string panelName)

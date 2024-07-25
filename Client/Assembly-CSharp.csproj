@@ -64,8 +64,10 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.35f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/LoadPanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/ICanGetModel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/IEventRegistraion.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/RegisterPanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Layers/Controller/IController.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/IBelongToArchitecture.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/BasePanel.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/EventRegistraion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/EventExternsion.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/CanSendCommandExternsion.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/TipPanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/TestCommand.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Layers/System/ISystem.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/IArchitecture.cs" />
@@ -91,6 +94,7 @@
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/ICanSendCommand.cs" />
     <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/UISystem.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Rules/ICanSendEvent.cs" />
+    <Compile Include="Assets/Scripts/GLFramework/SpecificCode/PresentationLayerCode/UISystem/MainUI/CharacterCreatePanel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Layers/Model/IModel.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Architecture.cs" />
     <Compile Include="Assets/Scripts/GLFramework/ReusableCode/Architecture/Event/IEventSystem.cs" />

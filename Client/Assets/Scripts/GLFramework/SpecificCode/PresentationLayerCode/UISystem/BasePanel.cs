@@ -22,25 +22,21 @@ public abstract class BasePanel : MonoBehaviour, IBasePanel
     public virtual void OnInit()
     {
         m_UISystem = this.GetSystem<IUISystem>();
-        Debug.Log(gameObject.name + " OnInit()");
         gameObject.SetActive(false);
     }
 
     public virtual void OnDestroy()
     {
-        Debug.Log(gameObject.name + " OnDestroy()");
         Destroy(gameObject);
     }
 
-    public virtual void OnEnter()
+    public virtual void OnEnter(params object[] objs)
     {
-        Debug.Log(gameObject.name + " OnEnter()");
         gameObject.SetActive(true);
     }
 
     public virtual void OnExit()
     {
-        Debug.Log(gameObject.name + " OnExit()");
         gameObject.SetActive(false);
     }
 
@@ -52,5 +48,11 @@ public abstract class BasePanel : MonoBehaviour, IBasePanel
     public virtual void OnResume()
     {
         Debug.Log(gameObject.name + " OnResume()");
+    }
+    protected void OpenPanel<T>(params object[] objs)where T:BasePanel{
+        m_UISystem.OpenPanel<T>(objs);
+    }
+    protected void ClosePanel<T>(bool destroy= false)where T:BasePanel{
+        m_UISystem.ClosePanel<T>(destroy);
     }
 }

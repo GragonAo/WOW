@@ -7,7 +7,7 @@ using GLFramework;
 public interface IBasePanel : IController
 {
     public void OnInit();
-    public void OnEnter();
+    public void OnEnter(params object[] objs);
     public void OnPause();
     public void OnResume();
     public void OnExit();

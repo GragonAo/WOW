@@ -8,6 +8,6 @@ using GLFramework;
 /// </summary>
 public interface IUISystem : ISystem
 {
-    public void OpenPanel<T>() where T : BasePanel;
-    public void ClosePanel<T>() where T : BasePanel;
+    public void OpenPanel<T>(params object[] objs) where T : BasePanel;
+    public void ClosePanel<T>(bool destroy = false) where T : BasePanel;
 }
